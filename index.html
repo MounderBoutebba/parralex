@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parralex</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="sec">
+      <img src="img/bg.jpg" id="bg" />
+      <img src="img/mountain.png" id="mountain" />
+      <img src="img/moon.png" id="moon" />
+      <img src="img/road.png" id="road" />
+      <h1 id="text">Parralex Effect</h1>
+    </section>
+    <script>
+      let bg = document.getElementById("bg");
+      let mountain = document.getElementById("mountain");
+      let moon = document.getElementById("moon");
+      let road = document.getElementById("road");
+      let text = document.getElementById("text");
+
+      window.addEventListener("scroll", function () {
+        var value = window.scrollY;
+
+        bg.style.top = value * 0.5 + "px";
+        moon.style.left = -value * 0.5 + "px";
+        mountain.style.top = value * 0.5 + "px";
+        road.style.bottom = value * 0.5 + "px";
+        text.style.top = value * 0.5 + "px";
+      });
+    </script>
+  </body>
+</html>
